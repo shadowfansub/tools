@@ -36,13 +36,20 @@ Dependências e execução:
 
 Utilitário em lote para Windows que automatiza o processo de muxing (combinar) vídeo, áudio, legendas, capítulos e anexos em um único arquivo MKV usando as ferramentas do MKVToolNix.
 
-Dependências:
-
-- MKVToolNix (necessário `mkvmerge` e `mkvextract`).
-- PowerShell (utilizado para descompactar arquivos ZIP via `Expand-Archive`).
-
-Uso básico:
+Uso:
 
 ```powershell
 muxer.bat video.mkv audio.flac subtitles.srt chapters.xml fonts.zip
 ```
+
+## `keyframes-generator`
+
+Ferramenta simples (batch) para gerar um log de keyframes a partir de um arquivo de vídeo usando o `ffmpeg` para enviar frames no formato yuv4mpegpipe para o utilitário `SCXvid.exe`.
+
+Uso:
+
+```powershell
+keyframes.bat "c:\caminho\para\video.mkv"
+```
+
+
